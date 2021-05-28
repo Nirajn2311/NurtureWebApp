@@ -10,6 +10,8 @@ import AboutUs from './AboutUs';
 import OurImpact from './OurImpact';
 import Navbar from './Navbar';
 
+import menteeSvg from '../../assets/images/mentee.svg';
+import mentorSvg from '../../assets/images/mentor.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.scss';
 
@@ -38,16 +40,18 @@ export default function LandingPage() {
             </Jumbotron>
             <AboutUs />
             <OurImpact />
-            <div className='p-5 text-center wow fadeInUp bg-primary' id='mentor-mentee'>
+            <div className='p-5 text-center' id='mentor-mentee'>
                 <Link to='/new-landing/become-mentor'>
-                    <Card id='card-mentor'>
+                    <Card id='card-mentor' className='wow fadeInUp'>
+                        <Card.Img src={mentorSvg} />
                         <Card.Body>
                             <Card.Title>BECOME A MENTOR</Card.Title>
                         </Card.Body>
                     </Card>
                 </Link>
                 <Link to='/new-landing/become-mentee'>
-                    <Card id='card-mentee'>
+                    <Card id='card-mentee' className='wow fadeInUp'>
+                        <Card.Img src={menteeSvg} />
                         <Card.Body>
                             <Card.Title>BECOME A MENTEE</Card.Title>
                         </Card.Body>
